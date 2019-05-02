@@ -5,29 +5,29 @@
             {
             "title": "Eat",
             "Owner": "Dennis",
-            "description": "",
-            "Priority": ""
+            "description": "Description 1",
+            "Priority": "high"
             },
             
             {
                 "title": "Study",
                 "Owner": "Teresita",
-                "description": "",
-                "Priority": ""
+                "description": "Description 2",
+                "Priority": "high"
             },
 
             {
                 "title": "Sleep",
                 "Owner": "Diego",
-                "description": "",
-                "Priority": ""
+                "description": "Description 3",
+                "Priority": "medium"
             },
 
             {
                 "title": "Read",
                 "Owner": "Nataly",
-                "description": "",
-                "Priority": ""
+                "description": "Description 4",
+                "Priority": "low"
             }
 
         ]
