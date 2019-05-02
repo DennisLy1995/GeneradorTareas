@@ -1,0 +1,35 @@
+{
+
+    "todos" : 
+        [
+            {
+            "title": "Eat",
+            "Owner": "Dennis",
+            "description": "",
+            "Priority": ""
+            },
+            
+            {
+                "title": "Study",
+                "Owner": "Teresita",
+                "description": "",
+                "Priority": ""
+            },
+
+            {
+                "title": "Sleep",
+                "Owner": "Diego",
+                "description": "",
+                "Priority": ""
+            },
+
+            {
+                "title": "Read",
+                "Owner": "Nataly",
+                "description": "",
+                "Priority": ""
+            }
+
+        ]
+
+}
