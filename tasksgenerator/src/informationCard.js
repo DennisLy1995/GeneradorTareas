@@ -9,7 +9,7 @@ class InformationCard extends React.Component {
   render() {
 
     return (
-      <div className="card border-secondary mb-3" style={{ minWidth: '15rem', width:'20rem', margin: '1%' , display: 'inline-block'}}>
+      <div className="card border-secondary mb-3" style={{minWidth: '15rem',maxWidth:'20rem', width:'20rem', margin: '1%' , display: 'inline-block'}}>
 
         <div className="card-header"  style={{textAlign:'center'}}>
           <div className="form-group">
@@ -17,10 +17,12 @@ class InformationCard extends React.Component {
           </div>
         </div>
 
-        <div className="card-body"  style={{textAlign:'center'}}>
+        <div className="card-body"  style={{textAlign:'center', height:'20rem', maxHeight:'20rem', overflow: 'scroll'}}>
           <div className="form-group">
             <label htmlFor="description">{this.props.description}</label>
-            <label htmlFor="priority">{this.props.priority}</label>
+          </div>
+          <div className="form-group">
+            <label htmlFor="priority">Priority: {this.props.priority}</label>
           </div>
         </div>
         

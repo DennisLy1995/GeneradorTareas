@@ -68,7 +68,10 @@ export default Card;
 
 function addInformationalCard(){
 
-  ReactDOM.render(<InformationCard title="Titulo de prueba" description="Lorem ipsum" priority="Super High"/>, document.getElementById('tasksContainer'));
+  var title = "title test";
+  var description = "Description test";
+  var priority  = "High";
+  ReactDOM.render(<InformationCard title={title} description={description} priority={priority}/>, document.getElementById('tasksContainer'));
   
 
 }
