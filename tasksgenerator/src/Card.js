@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import todos from "./todos.json";
+import InformationCard from "./informationCard.js";
+import ReactDOM from 'react-dom';
 
 class Card extends React.Component {
 
@@ -28,7 +30,7 @@ class Card extends React.Component {
         </div>
         
         <div className="card-footer">
-          <button type="button" className="btn btn-info">Add task</button>
+          <button type="button" className="btn btn-info" onClick={addInformationalCard}>Add task</button>
           
           <div style={{float:'right', marginBottom:'10px'}}>
             <div>
@@ -63,5 +65,12 @@ class Card extends React.Component {
 }
 
 export default Card;
+
+function addInformationalCard(){
+
+  ReactDOM.render(<InformationCard title="Titulo de prueba" description="Lorem ipsum" priority="Super High"/>, document.getElementById('tasksContainer'));
+  
+
+}
 
 

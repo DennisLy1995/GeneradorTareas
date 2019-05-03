@@ -25,7 +25,7 @@ class InformationCard extends React.Component {
         </div>
         
         <div className="card-footer"  style={{textAlign:'center'}}>
-          <button type="button" className="btn btn-warning">Delete task</button>
+          <button type="button" className="btn btn-danger">Delete task</button>
         </div>
 
       </div>
