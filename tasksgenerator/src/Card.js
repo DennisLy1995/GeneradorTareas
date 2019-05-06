@@ -1,18 +1,13 @@
-import React, { Component } from "react";
-import todos from "./todos.json";
-import InformationCard from "./informationCard.js";
-import ReactDOM from 'react-dom';
+import React, { Component } from "react"
+import todos from "./todos.json"
+import InformationCard from "./informationCard.js"
+import ReactDOM from 'react-dom'
 
 class Card extends React.Component {
-
-  constructor() {
-    super();
-  }
-
   render() {
 
     return (
-      <div className="card border-secondary mb-3" style={{ minWidth: '15rem', width: '20rem', margin: '1%', display: 'inline-block' }}>
+      <div className="card border-secondary mb-3" style={{ minWidth: '30rem', width: '29%', margin: '1%', display: 'inline-block' }}>
 
         <div className="card-header" style={{ textAlign: 'center' }}>
           <div className="form-group">
@@ -24,7 +19,7 @@ class Card extends React.Component {
         <div className="card-body" style={{ textAlign: 'center' }}>
           <div className="form-group">
             <label htmlFor="description">Description</label>
-            <textarea className="form-control" id="descriptionNew" rows="3"></textarea>
+            <textarea className="form-control" id="descriptionNew" rows="6"></textarea>
           </div>
           <small id="emailHelp" className="form-text text-muted">Keep your tasks in order...</small>
         </div>
@@ -33,7 +28,7 @@ class Card extends React.Component {
           <button type="button" className="btn btn-info" onClick={addInformationalCard}>Add task</button>
 
           <div style={{ float: 'right', marginBottom: '10px' }}>
-          
+
             <div>
               <label className="form-check-label">
                 <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios1" value="Low" />
@@ -59,42 +54,46 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+export default Card
 
 function addInformationalCard() {
 
-  var title = document.getElementById('titleNew').value;
-  var description = document.getElementById('descriptionNew').value;
-  var priority = '';
-  var radio1 = document.getElementById('optionsRadios1');
-  var radio2 = document.getElementById('optionsRadios2');
-  var radio3 = document.getElementById('optionsRadios3');
+  var title = document.getElementById('titleNew').value
+  var description = document.getElementById('descriptionNew').value
+  var priority = ''
+  var radio1 = document.getElementById('optionsRadios1')
+  var radio2 = document.getElementById('optionsRadios2')
+  var radio3 = document.getElementById('optionsRadios3')
+  var oldCards = document.getElementById('tasksContainer')
+  console.log(oldCards)
+  
 
   if (radio1.checked) {
-    priority = 'High';
+    priority = 'High'
   } else if (radio2.checked) {
-    priority = 'Medium';
+    priority = 'Medium'
   } else if (radio3.checked) {
-    priority = 'Low';
+    priority = 'Low'
   } else {
-    priority = '';
+    priority = ''
   }
 
   if (title == "" || description == "" || priority == "") {
-    alert('Complete all the fills in the card');
+    alert('Complete all the fills in the card')
   } else {
-    ReactDOM.render(<InformationCard title={title} description={description} priority={priority} />, document.getElementById('tasksContainer'));
-    clearMainCard();
+    ReactDOM.render(<InformationCard title={title} description={description} priority={priority} />, document.getElementById('tasksContainer'))
+    ReactDOM.render(oldCards, document.getElementById('tasksContainer'))
+    clearMainCard()
   }
 
 }
 
 function clearMainCard() {
-  document.getElementById('titleNew').value = '';
-  document.getElementById('descriptionNew').value = '';
-  document.getElementById('optionsRadios1').checked = false;
-  document.getElementById('optionsRadios2').checked = false;
-  document.getElementById('optionsRadios3').checked = false;
+  document.getElementById('titleNew').value = ''
+  document.getElementById('descriptionNew').value = ''
+  document.getElementById('optionsRadios1').checked = false
+  document.getElementById('optionsRadios2').checked = false
+  document.getElementById('optionsRadios3').checked = false
 }
 
 

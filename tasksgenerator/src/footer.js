@@ -5,10 +5,6 @@ import logoL from './icons/linkedin.png';
 
 
 class Footer extends React.Component {
-
-    constructor() {
-        super();
-    }
     render() {
         return (
 

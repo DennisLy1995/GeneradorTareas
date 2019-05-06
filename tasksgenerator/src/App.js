@@ -4,10 +4,12 @@ import Navigation from "./Navigation";
 import Card from "./Card";
 import InformationCard from './informationCard';
 import InformationBlock from "./informationRead";
+import TODOS from './todos.json';
 
 class App extends React.Component {
   constructor() {
-    super();
+    super()
+    this.list = TODOS
   }
 
   render() {
@@ -21,12 +23,13 @@ class App extends React.Component {
           <InformationBlock title="Tasks Generator" information="Use the main card to generate tasks you have to do, you can delete the cards once the task is completed." />
         </div>
         <div id="tasksContainer">
-          <InformationCard title="Titulo de la tarjeta" description="Lorem ipsum" priority="High" />
-          <InformationCard title="Titulo de la tarjeta" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." priority="High" />
+          <InformationCard title={this.list.todos[0].title} description={this.list.todos[0].description} priority={this.list.todos[0].priority} />
+          <InformationCard title={this.list.todos[1].title} description={this.list.todos[1].description} priority={this.list.todos[1].priority} />
+          <InformationCard title={this.list.todos[2].title} description={this.list.todos[2].description} priority={this.list.todos[2].priority} />
+          <InformationCard title={this.list.todos[3].title} description={this.list.todos[3].description} priority={this.list.todos[3].priority} />
+          <InformationCard title={this.list.todos[4].title} description={this.list.todos[4].description} priority={this.list.todos[4].priority} />
         </div>
       </div>
-
-
     );
   }
 

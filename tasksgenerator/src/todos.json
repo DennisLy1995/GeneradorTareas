@@ -1,35 +1,29 @@
 {
-
-    "todos" : 
-        [
-            {
-            "title": "Eat",
-            "Owner": "Dennis",
-            "description": "Description 1",
-            "Priority": "high"
-            },
-            
-            {
-                "title": "Study",
-                "Owner": "Teresita",
-                "description": "Description 2",
-                "Priority": "high"
-            },
-
-            {
-                "title": "Sleep",
-                "Owner": "Diego",
-                "description": "Description 3",
-                "Priority": "medium"
-            },
-
-            {
-                "title": "Read",
-                "Owner": "Nataly",
-                "description": "Description 4",
-                "Priority": "low"
-            }
-
-        ]
-
+    "todos": [
+        {
+            "title": "Talk to my Girlfriend",
+            "description": "Talk and review how was her day.",
+            "priority": "High"
+        },
+        {
+            "title": "Study",
+            "description": "Study and learn new ways to code every night after work.",
+            "Priority": "High"
+        },
+        {
+            "title": "Social media",
+            "description": "Take a look at the social media, to review things i like and get some ideas of what going on out in the word.",
+            "Priority": "Low"
+        },
+        {
+            "title": "Play PS4",
+            "description": "Play the new games in my PS4 to relax the mind.",
+            "priority": "Low"
+        },
+        {
+            "title": "Workout",
+            "description": "Workout Tuesday, Thursday, Saturday and Sunday",
+            "priority": "High"
+        }
+    ]
 }

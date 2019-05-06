@@ -1,15 +1,12 @@
 import React, { Component } from "react";
+import './informationCard.css';
 import todos from "./todos.json";
 
 class InformationCard extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
 
     return (
-      <div className="card border-secondary mb-3" style={{minWidth: '15rem',maxWidth:'20rem', width:'20rem', margin: '1%' , display: 'inline-block'}}>
+      <div className="card border-secondary mb-3 informationCard" style={{minWidth: '15rem',maxWidth:'20rem', width:'15%', margin: '1%' , display: 'inline-block'}}>
 
         <div className="card-header"  style={{textAlign:'center'}}>
           <div className="form-group">
