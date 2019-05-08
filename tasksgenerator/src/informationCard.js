@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import './informationCard.css';
 import todos from "./todos.json";
 
+var informationCardId = '';
+
 class InformationCard extends React.Component {
   render() {
-
+    informationCardId = 'informationCard' + this.props.numberID
+    console.log(informationCardId)
     return (
-      <div className="card border-secondary mb-3 informationCard" style={{minWidth: '15rem',maxWidth:'20rem', width:'15%', margin: '1%' , display: 'inline-block'}}>
+      <div  id={'informationCard'+this.props.numberID} className="card border-secondary mb-3 informationCard" style={{minWidth: '15rem',maxWidth:'20rem', width:'15%', margin: '1%' , display: 'inline-block'}}>
 
         <div className="card-header"  style={{textAlign:'center'}}>
           <div className="form-group">
@@ -24,7 +27,7 @@ class InformationCard extends React.Component {
         </div>
         
         <div className="card-footer"  style={{textAlign:'center'}}>
-          <button type="button" className="btn btn-danger">Delete task</button>
+          <button type="button" className="btn btn-danger" onClick={deleteCard(informationCardId)}>Delete task</button>
         </div>
 
       </div>
@@ -34,3 +37,9 @@ class InformationCard extends React.Component {
 }
 
 export default InformationCard;
+
+
+
+function deleteCard(informationCard){
+  //document.getElementById('tasksContainer').removeChild('informationCard')
+}

@@ -1,14 +1,7 @@
 .informationCard:hover{
 
-    animation: animateForwards infinite 1s linear;
-
-}
-
-.informationCard{
-
     animation: animateForwards 1s linear;
-    transition-property: animation;
-    transition-delay: 1s;
+
 }
 
 
@@ -18,7 +11,7 @@
       
     }
     50%{
-      transform: rotate(3deg);
+      transform: rotate(5deg);
     }
     100%{
       transform: rotate(0deg);
