@@ -47,7 +47,7 @@ class Card extends React.Component {
   render() {
 
     return (
-      <div className="card border-secondary mb-3" style={{ minWidth: '30rem', width: '29%', margin: '1%', display: 'inline-block' }}>
+      <div className="card border-secondary mb-3" style={{ minWidth: '10rem', width: '29%', margin: '1%', display: 'inline-block' }}>
 
         <div className="card-header" style={{ textAlign: 'center' }}>
           <div className="form-group">

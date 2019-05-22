@@ -16,7 +16,7 @@ class InformationCard extends React.Component {
           </div>
         </div>
 
-        <div className="card-body"  style={{textAlign:'center', height:'20rem', maxHeight:'20rem', overflow: 'scroll'}}>
+        <div className="card-body"  style={{textAlign:'center', height:'20rem', maxHeight:'15rem', overflow: 'scroll'}}>
           <div className="form-group">
             <label htmlFor="description">{this.props.description}</label>
           </div>
