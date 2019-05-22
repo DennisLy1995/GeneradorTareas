@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { listenerCount } from "events";
-import logo from './list.svg';
 
 class informationBlock extends React.Component {
     render() {

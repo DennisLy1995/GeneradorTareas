@@ -1,9 +1,49 @@
 import React, { Component } from "react"
 import todos from "./todos.json"
-import InformationCard from "./informationCard.js"
-import ReactDOM from 'react-dom'
+
 
 class Card extends React.Component {
+  constructor(props){
+    super(props);
+    this.list = todos
+    this.state = {
+
+      oldCards : this.list
+
+    }
+
+    this.addInformationalCard = this.addInformationalCard.bind(this);
+
+  }
+
+ addInformationalCard() {
+
+    var title = document.getElementById('titleNew').value
+    var description = document.getElementById('descriptionNew').value
+    var priority = ''
+    var radio1 = document.getElementById('optionsRadios1')
+    var radio2 = document.getElementById('optionsRadios2')
+    var radio3 = document.getElementById('optionsRadios3')
+      
+    if (radio1.checked) {
+      priority = 'High'
+    } else if (radio2.checked) {
+      priority = 'Medium'
+    } else if (radio3.checked) {
+      priority = 'Low'
+    } else {
+      priority = ''
+    }
+  
+    if (title === "" || description === "" || priority === "") {
+      alert('Complete all the fills in the card')
+    } else {
+      clearMainCard()
+      console.log(this.state);
+    }
+  
+  }
+
   render() {
 
     return (
@@ -25,7 +65,7 @@ class Card extends React.Component {
         </div>
 
         <div className="card-footer">
-          <button type="button" className="btn btn-info" onClick={addInformationalCard}>Add task</button>
+          <button type="button" className="btn btn-info" onClick={this.addInformationalCard}>Add task</button>
 
           <div style={{ float: 'right', marginBottom: '10px' }}>
 
@@ -56,37 +96,7 @@ class Card extends React.Component {
 
 export default Card
 
-function addInformationalCard() {
 
-  var title = document.getElementById('titleNew').value
-  var description = document.getElementById('descriptionNew').value
-  var priority = ''
-  var radio1 = document.getElementById('optionsRadios1')
-  var radio2 = document.getElementById('optionsRadios2')
-  var radio3 = document.getElementById('optionsRadios3')
-  var oldCards = document.getElementById('tasksContainer')
-  console.log(oldCards)
-  
-
-  if (radio1.checked) {
-    priority = 'High'
-  } else if (radio2.checked) {
-    priority = 'Medium'
-  } else if (radio3.checked) {
-    priority = 'Low'
-  } else {
-    priority = ''
-  }
-
-  if (title == "" || description == "" || priority == "") {
-    alert('Complete all the fills in the card')
-  } else {
-    ReactDOM.render(<InformationCard title={title} description={description} priority={priority} />, document.getElementById('tasksContainer'))
-    ReactDOM.render(oldCards, document.getElementById('tasksContainer'))
-    clearMainCard()
-  }
-
-}
 
 function clearMainCard() {
   document.getElementById('titleNew').value = ''

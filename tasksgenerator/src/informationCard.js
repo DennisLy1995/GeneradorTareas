@@ -7,7 +7,6 @@ var informationCardId = '';
 class InformationCard extends React.Component {
   render() {
     informationCardId = 'informationCard' + this.props.numberID
-    console.log(informationCardId)
     return (
       <div  id={'informationCard'+this.props.numberID} className="card border-secondary mb-3 informationCard" style={{minWidth: '15rem',maxWidth:'20rem', width:'15%', margin: '1%' , display: 'inline-block'}}>
 
