@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import todos from "./todos.json"
+import InformationCard from "./informationCard.js";
 
 
 class Card extends React.Component {
@@ -12,7 +13,8 @@ class Card extends React.Component {
 
     }
 
-    this.addInformationalCard = this.addInformationalCard.bind(this);
+    this.addInformationalCard = this.addInformationalCard.bind(this)
+    this.clearMainCard = this.clearMainCard.bind(this)
 
   }
 
@@ -38,10 +40,20 @@ class Card extends React.Component {
     if (title === "" || description === "" || priority === "") {
       alert('Complete all the fills in the card')
     } else {
-      clearMainCard()
-      console.log(this.state);
+      this.clearMainCard() 
+      var newCard = <InformationCard numberID={this.state.oldCards.todos.length +1} title={title} description={description} priority={priority}/>
+      this.state.oldCards.todos.push({title : title , description : description , priority : priority})
+      console.log(this.state.oldCards.todos)
     }
   
+  }
+
+  clearMainCard() {
+    document.getElementById('titleNew').value = ''
+    document.getElementById('descriptionNew').value = ''
+    document.getElementById('optionsRadios1').checked = false
+    document.getElementById('optionsRadios2').checked = false
+    document.getElementById('optionsRadios3').checked = false
   }
 
   render() {
@@ -98,12 +110,6 @@ export default Card
 
 
 
-function clearMainCard() {
-  document.getElementById('titleNew').value = ''
-  document.getElementById('descriptionNew').value = ''
-  document.getElementById('optionsRadios1').checked = false
-  document.getElementById('optionsRadios2').checked = false
-  document.getElementById('optionsRadios3').checked = false
-}
+
 
 

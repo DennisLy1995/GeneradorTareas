@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Navigation.css";
-import logo from './logo.svg';
+import logo from './geometry.svg';
 
 class navigator extends Component {
   render() {

@@ -12,8 +12,13 @@ class App extends React.Component {
     this.state = TODOS.todos.map((todo, index) =>
     <InformationCard numberID={index} key={index} title={todo.title} description={todo.description} priority={todo.priority}/>
     );
+    this.getState = this.getState.bind(this)
   }
   
+  getState(){
+    return this.state
+  }
+
   render() {
     return (
       <div>
@@ -26,7 +31,7 @@ class App extends React.Component {
         </div>
         <div id="tasksContainer">
           { 
-            this.state
+            this.getState()
           }
         </div>
       </div>
